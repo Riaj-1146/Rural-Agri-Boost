@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "2652556304",
+    "project_id": "connect-with-github1146",
+    "storage_bucket": "connect-with-github1146.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2652556304:android:5d325c33ea2be22c554e95",
+        "android_client_info": {
+          "package_name": "com.example.ruralagriboost"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnQvMhOiwSiaEyDiFIDOl9jUcYtpx7pEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
