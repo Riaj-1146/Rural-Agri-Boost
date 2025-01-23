@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/tv_crop_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Agriculture Related Advance Technologies "
+            android:gravity="center"
+            android:background="@drawable/border_03"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+
+
+    <ListView
+        android:id="@+id/list_view_tec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        />
+
+</RelativeLayout>

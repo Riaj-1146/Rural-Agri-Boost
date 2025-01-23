@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="30dp"
+    android:background="@drawable/back03"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:id="@+id/img_rural_agri_boost"
+        android:layout_width="250dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/agriboost" />
+
+
+    <TextView
+        android:id="@+id/tv_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select what you want to know about "
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+    <Button
+        android:id="@+id/bt_crop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a Crop "
+        android:textSize="18sp"
+        android:backgroundTint="#523F05"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:id="@+id/bt_agri_tec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advance Agriculture Technology "
+        android:textSize="18sp"
+        android:backgroundTint="#523F05"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:id="@+id/bt_agri_helpline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agriculture Helpline"
+        android:textSize="18sp"
+        android:backgroundTint="#523F05"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="0dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FeedBack"
+            android:textColor="@color/black"
+            android:layout_gravity="right"
+            android:background="@drawable/border_03"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LogOut"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@drawable/border_03"
+            android:layout_gravity="left"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_margin="5dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
