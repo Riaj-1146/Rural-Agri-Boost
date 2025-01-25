@@ -1,17 +1,13 @@
 package com.example.ruralagriboost;
-
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,18 +16,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView img_greetingImageView=findViewById(R.id.img_greetingImageView);
-        TextView txt_greetingTextView = findViewById(R.id.txt_greetingTextView);
-        TextView txt_greetingTextView1 = findViewById(R.id.txt_greetingTextView1);
         Button bt_startButton = findViewById(R.id.bt_startButton);
 
         bt_startButton.setOnClickListener(v -> {
 
-            Intent intent = new Intent(MainActivity.this,Regi_Login_Activity.class);
+
+            LayoutInflater inflater = getLayoutInflater();
+
+            View customToastView = inflater.inflate(R.layout.custom_toast, findViewById(android.R.id.content), false);
+
+
+            ImageView toastImage = customToastView.findViewById(R.id.toast_image);
+            TextView toastText = customToastView.findViewById(R.id.toast_text);
+
+
+            toastText.setText("Welcome to Rural_Agri_Boost");
+
+
+            Toast customToast = new Toast(MainActivity.this);
+            customToast.setDuration(Toast.LENGTH_SHORT);
+            customToast.setView(customToastView);
+            customToast.show();
+
+
+            Intent intent = new Intent(MainActivity.this, Regi_Login_Activity.class);
             startActivity(intent);
             finish();
-
         });
-
     }
 }

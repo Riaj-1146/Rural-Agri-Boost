@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/greeting_image" />
+
+
+    <TextView
+        android:id="@+id/splash_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splash_image"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to Rural_Agri_Boost"
+       android:textStyle="italic"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium" />
+
+</RelativeLayout>
