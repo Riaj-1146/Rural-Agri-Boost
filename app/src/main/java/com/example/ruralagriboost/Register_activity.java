@@ -31,11 +31,11 @@ public class Register_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        // Initialize Firebase
+
         FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
 
-        // Initialize UI elements
+
         tv_sign_up = findViewById(R.id.tv_sign_up);
         tv_Instruction = findViewById(R.id.tv_Instruction);
         et_name = findViewById(R.id.et_name);
@@ -47,10 +47,10 @@ public class Register_activity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar_registration);
 
-        // Hide ProgressBar initially
+
         progressBar.setVisibility(View.GONE);
 
-        // Register Button
+
         bt_register_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +58,7 @@ public class Register_activity extends AppCompatActivity {
             }
         });
 
-        // Instruction TextView Click Listener
+
         tv_Instruction.setOnClickListener(v -> {
             Intent intent = new Intent(Register_activity.this, Regi_Login_Activity.class);
             startActivity(intent);
@@ -73,13 +73,13 @@ public class Register_activity extends AppCompatActivity {
         String confirm_password = et_user_confirm_password.getText().toString().trim();
         String phone = et_user_phone_num.getText().toString().trim();
 
-        // Validation patterns
+
         Pattern namePattern = Pattern.compile("^[a-zA-Z\\s]{3,20}$");
         Pattern emailPattern = Pattern.compile("^[a-zA-Z0-9._-]+@[a-z]+\\.[a-z]{2,6}$");
         Pattern passwordPattern = Pattern.compile("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$");
         Pattern phonePattern = Pattern.compile("^01\\d{9}$");
 
-        // Validation checks
+
         if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirm_password.isEmpty() || phone.isEmpty()) {
             Toast.makeText(this, "All fields must be filled out!", Toast.LENGTH_SHORT).show();
             return;
@@ -115,11 +115,11 @@ public class Register_activity extends AppCompatActivity {
             return;
         }
 
-        // Show ProgressBar and start registration
+
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(task -> {
-                    progressBar.setVisibility(View.GONE); // Hide ProgressBar
+                    progressBar.setVisibility(View.GONE);
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
                         if (user != null) {
